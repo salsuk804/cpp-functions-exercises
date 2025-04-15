@@ -1,0 +1,119 @@
+// Task:
+//
+// Write a C++ program that :
+// asks the user to enter a positive integer and uses a function to check whether the number is prime or not.The function should return 1 if the number is prime and 0 if it is not.
+// Defines a void function prime() that prints the first 10 prime numbers.
+// And a void function reverseprime() that prints the first 10 prime numbers in reverse order.
+// Sample Output 1 :
+//	Enter a positive integer : 7
+//	7 is a prime number.
+//	First 10 prime numbers are : 2 3 5 7 11 17 19 23 29
+//	Reverse prime numbers are : 29 23 19 17 11 7 5 3 2
+//
+//
+//
+// SOLUTION:
+
+
+#include <iostream>
+using namespace std;
+
+
+int checkPrime() {
+    
+    int num = 0;
+    cout << "Enter any positive number: ";
+    cin >> num;
+    
+
+    bool is_prime = true;
+
+    for (int i = 2; i <= num / 2; i++) {
+        if (num % i == 0) {
+            is_prime = false;
+            break;
+        }
+    }
+    if (is_prime == true) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+void prime() {
+
+    int prime_numbers[10];
+    int num = 2;
+
+    int i = 0;
+
+    while (i < 10) {
+        bool is_prime = true;
+        for (int x = 2; x <= num / 2; x++) {
+            if (num % x == 0) {
+                is_prime = false;
+                break;
+            }
+        }
+        if (is_prime == true) {
+            prime_numbers[i] = num;
+            i++;
+        }
+        num++;
+    }
+    cout << "Prime numbers: ";
+    for (int a = 0; a < 10; a++) {
+        cout << prime_numbers[a] << " ";
+    }
+}
+
+void reverse_prime() {
+
+    int prime_numbers[10];
+    int num = 2;
+
+    int i = 0;
+
+    while (i < 10) {
+        bool is_prime = true;
+        for (int x = 2; x <= num / 2; x++) {
+            if (num % x == 0) {
+                is_prime = false;
+                break;
+            }
+        }
+        if (is_prime == true) {
+            prime_numbers[i] = num;
+            i++;
+        }
+        num++;
+    }
+    cout << "Reverse prime numbers: ";
+    for (int a = 9; a >= 0; a--) {
+        cout << prime_numbers[a] << " ";
+    }
+
+}
+
+
+int main()
+{
+ 
+    int ret = checkPrime();
+    
+    if (ret == 1) {
+        cout << "Number is prime" << endl;
+    }
+    else {
+        cout << "Number is NOT prime"<<endl;
+    }
+
+    prime();
+    cout << endl;
+    reverse_prime();
+}
+
+
+
