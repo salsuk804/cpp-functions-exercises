@@ -1,9 +1,9 @@
 // Task:
 //
 // Write a C++ program that :
-// asks the user to enter a positive integer and uses a function to check whether the number is prime or not.The function should return 1 if the number is prime and 0 if it is not.
-// Defines a void function prime() that prints the first 10 prime numbers.
-// And a void function reverseprime() that prints the first 10 prime numbers in reverse order.
+// asks the user to enter a positive integer and uses a function to check whether the number is prime or not.The function should return 1 if the number is prime and 0 if it is not.
+// Defines a void function prime() that prints the first 10 prime numbers.
+// And a void function reverseprime() that prints the first 10 prime numbers in reverse order.
 // Sample Output 1 :
 //	Enter a positive integer : 7
 //	7 is a prime number.
