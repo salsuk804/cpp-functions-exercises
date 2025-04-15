@@ -1,0 +1,42 @@
+// Write a function that takes an integer as input and returns the factorial of that number.
+//
+// Sample Output :
+// Factorial of 5 is 120.
+
+// SOLUTION: 
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+
+int factorial(int number) {
+
+    int total = 1;
+
+    for (int i = number; i >= 1; i--) {
+        total = total * i;
+    }
+    return total;
+
+}
+
+
+
+int main()
+{
+ 
+    int num = 0;
+    cout << "Enter number: ";
+    cin >> num;
+    int ret = factorial(num);
+    cout << "Factorial of "<<num <<" : " << ret;
+
+    return 0;
+}
+
