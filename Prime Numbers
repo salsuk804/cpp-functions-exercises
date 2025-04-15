@@ -113,6 +113,9 @@ int main()
     prime();
     cout << endl;
     reverse_prime();
+
+
+return 0;
 }
 
 
