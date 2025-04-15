@@ -1,0 +1,42 @@
+// Write a program that uses a void function to print a 5x5 matrix where the main diagonal is filled with 1s and the rest with 0s.
+// Sample Output :
+// 
+// 1 0 0 0 0
+// 0 1 0 0 0
+// 0 0 1 0 0
+// 0 0 0 1 0
+// 0 0 0 0 1
+
+
+// SOLUTION: 
+
+
+
+#include <iostream>
+using namespace std;
+
+void matrix() {
+
+    for (int i = 1; i <= 5; i++) {
+        for (int a = 1; a <= 5; a++) {
+            if (a == i) {
+                cout << " 1 ";
+            }
+            else {
+                cout << " 0 ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+
+
+int main()
+{
+ 
+    matrix();
+
+    return 0;
+}
+
