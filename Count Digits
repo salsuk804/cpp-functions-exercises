@@ -1,7 +1,7 @@
 // Create a function int countDigits(int num) that returns the number of digits in an integer.
 //
 // Sample Output :
-// Digits in 3489 = 4
+// Digits in 3489 = 4 
 
 // SOLUTION: 
 
