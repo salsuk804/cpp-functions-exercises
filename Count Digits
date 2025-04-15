@@ -1,0 +1,51 @@
+// Create a function int countDigits(int num) that returns the number of digits in an integer.
+//
+// Sample Output :
+// Digits in 3489 = 4
+
+// SOLUTION: 
+
+
+
+#include <iostream>
+using namespace std;
+
+
+int countDigits(int num) {
+
+    int count = 0;
+
+    if (num == 0) {
+        count = 1;
+
+    }
+
+    else {
+
+        int x = num;
+        while (x != 0) {
+
+            x = x / 10;
+            count++;
+
+        }
+    }
+    
+    return count;
+
+}
+
+
+
+int main()
+{
+ 
+    int num = 0;
+    cout << "Enter didgits: ";
+    cin >> num;
+    int ret = countDigits(num);
+    cout << "Total number of digits: " << ret;
+
+
+    return 0;
+}
