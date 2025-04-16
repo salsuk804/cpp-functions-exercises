@@ -1,0 +1,55 @@
+// Write a function that takes an array and its size and returns the sum of unique elements(elements that occur only once).
+//
+// Sample Output :
+// Enter number : 1, 2, 2, 3, 4, 4, 5
+// Sum of unique elements : 9
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+
+int sum_of_unique_elements(int arr[], int size) {
+
+    int sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        int count = 0;
+
+        for (int a = 0; a < size; a++) {
+            if (arr[i] == arr[a]) {
+                count++;
+            }
+        }
+
+        if (count == 1) {
+            sum = sum + arr[i];
+        }
+    }
+    return sum;
+}
+
+
+
+int main()
+{
+    const int size = 5;
+    int arr[size];
+    
+    for (int i = 0; i < size; i++) {
+        cout << "Enter number: ";
+        cin >> arr[i];
+    }
+    
+    int ret = sum_of_unique_elements(arr, size);
+    cout << "Sum of unique elements: " << ret;
+   
+
+    return 0;
+}
+
+
+
