@@ -1,0 +1,40 @@
+// Write a function that takes a C - style string(null terminated char array) and returns the number of consonants.
+// Sample Output :
+// Enter a word : computer
+// Number of consonants : 5
+
+
+
+#include <iostream>
+using namespace std;
+
+
+int count_Consonants(char arr[]) {
+
+    int count = 0;
+    for (int i = 0; arr[i] != '\0'; i++) {
+        if (arr[i] != 'a' && arr[i] != 'e' && arr[i] != 'i' && arr[i] != 'o' && arr[i] != 'u') {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+
+int main()
+{
+    char arr[25];
+    cout << "Enter a word: ";
+    cin.getline(arr, 25);
+    
+    int ret = count_Consonants(arr);
+
+    cout << "Number of consonants: " << ret;
+   
+
+    return 0;
+}
+
+
+
