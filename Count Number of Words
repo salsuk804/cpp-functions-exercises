@@ -1,0 +1,41 @@
+// Write a function that takes a C - style string(null terminated char array) and returns the number of words
+//
+// Sample Output :
+// Enter a sentence : I love programming
+// Word count : 3
+
+
+
+#include <iostream>
+using namespace std;
+
+
+int count_words(char arr[]) {
+
+    int count = 1;
+    for (int i = 0; arr[i] != '\0'; i++) {
+        if (arr[i]==' ') {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+
+int main()
+{
+    char arr[100];
+    cout << "Enter a word: ";
+    cin.getline(arr, 100);
+    
+    int ret = count_words(arr);
+
+    cout << "Number of words: " << ret;
+   
+
+    return 0;
+}
+
+
+
