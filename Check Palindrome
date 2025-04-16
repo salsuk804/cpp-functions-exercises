@@ -1,0 +1,53 @@
+//  Write a C++ program that defines a function to check if a C - style string(null terminated char array) is a palindrome or not.
+//
+//  Sample Output 1:
+//  Enter a word : level
+//  "level" is a palindrome.
+//
+//  Sample Output 2 :
+//  Enter a word : hello
+//  "hello" is not a palindrome.
+
+
+
+#include <iostream>
+using namespace std;
+
+
+void checkPalindrome() {
+    
+    char arr[25];
+    cout << "Enter a word: ";
+    cin.getline(arr, 25);
+
+    bool is_Palindrome = true;
+    int size = 0;
+    for (int i = 0; arr[i] != '\0'; i++) {
+        size++;
+    }
+    for (int i = 0; i < size; i++) {
+        if (arr[i] != arr[size - 1 - i]) {
+            is_Palindrome = false;
+            break;
+        }
+    }
+    if (is_Palindrome == true) {
+        cout << '"' << arr << '"' << " is Palindrome";
+    }
+    else {
+        cout << '"' << arr << '"' << " is NOT Palindrome";
+    }
+}
+
+
+
+int main()
+{
+    checkPalindrome();
+   
+
+    return 0;
+}
+
+
+
